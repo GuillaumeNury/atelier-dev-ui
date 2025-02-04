@@ -1,6 +1,8 @@
 import { CurrencyPipe, DatePipe, DecimalPipe } from '@angular/common';
 import { Component, LOCALE_ID } from '@angular/core';
 
+// https://angular.dev/api/common/DatePipe?tab=usage-notes
+
 @Component({
   selector: 'app-ng-pipes',
   imports: [DatePipe, DecimalPipe, CurrencyPipe],
