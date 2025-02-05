@@ -1,4 +1,5 @@
 // @ts-nocheck
+// prettier-ignore
 export {};
 
 /**
@@ -22,17 +23,28 @@ number = 'quarante-deux';
 const userCollection = {
   count: 2,
   items: [
-    { name: 'John', age: 42, hobbies: ['reading', 'swimming'], hasBlueEyes: true },
-    { name: 'Jane', age: 35, hobbies: ['running', 'climbing'], hasBlueEyes: false }
-  ]
-}
+    {
+      name: 'John',
+      age: 42,
+      hobbies: ['reading', 'swimming'],
+      hasBlueEyes: true,
+    },
+    {
+      name: 'Jane',
+      age: 35,
+      hobbies: ['running', 'climbing'],
+      hasBlueEyes: false,
+    },
+  ],
+};
 
 /**
  * On peut accéder aux propriétés d'un objet de deux manières différentes.
  */
 const user = userCollection.items[0];
 const userName = user.name;
-const userName2 = user['name'];
+const property = 'name';
+const userName2 = user[property];
 
 /**
  * Deux façon de représenter une absence de valeur.
@@ -67,8 +79,7 @@ const result1 = 1 + '2'; // '12'
 const result2 = '1' + 2; // '12'
 const result3 = 1 + true; // 2
 const result4 = 1 + []; // '1'
-const result5 = 1 + [2]; // '2'
-
+const result5 = 1 + [2]; // '12'
 
 /**
  * On peut créer des chaines de caractères avec des variables
@@ -89,4 +100,15 @@ const user2 = { name, age: 42 };
  */
 const legume = { color: 'Green', weight: 1 };
 const { color, weight } = legume;
+/**
+ * pareil que
+ * const color = legume.color;
+ * const weight = legume.weight;
+ */
+
 const { color: color2, weight: weight2 } = legume;
+/**
+ * pareil que
+ * const color2 = legume.color;
+ * const weight2 = legume.weight;
+ */

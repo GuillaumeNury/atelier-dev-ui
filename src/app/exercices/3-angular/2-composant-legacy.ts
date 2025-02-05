@@ -19,9 +19,11 @@ type Animal =
     <h1>{{ title }}</h1>
 
     <p *ngIf="description; else noDescription">{{ description }}</p>
+
     <ng-template #noDescription>
       <p>No description</p>
     </ng-template>
+
     <div *ngFor="let animal of animals; trackBy: trackByFn">
       <h2>{{ animal.name }}</h2>
 
@@ -41,7 +43,7 @@ type Animal =
   // styleUrl: './example.component.scss'
 })
 export class ExampleComponent {
-  @Input({ required: true }) title: string = '';
+  @Input({ required: true }) title?: string;
 
   @Input() description?: string;
 

@@ -8,6 +8,7 @@ const age = 10;
 
 if (age >= 18) {
   console.log('Adult');
+  return;
 } else if (age >= 13) {
   console.log('Teenager');
 } else {
@@ -35,18 +36,31 @@ switch (color) {
  */
 const userType = age >= 18 ? 'Adult' : 'Child';
 
+let userType2;
+
+if (age >= 18) {
+  userType2 = 'Adult';
+} else {
+  userType2 = 'Child';
+}
+
 /**
  * Loops
  */
 const users = ['John', 'Jane', 'Jack'];
 
 for (let i = 0; i < users.length; i++) {
-  console.log(users[i]);
+  const user = users[i];
+  console.log(user);
 }
 
 for (const user of users) {
   console.log(user);
 }
+
+users.forEach((user, index) => {
+  console.log(user);
+});
 
 /**
  * While loop

@@ -27,7 +27,6 @@ let isDone2 = false;
 let age2 = 30;
 let name2 = 'Alice';
 
-
-function add2(a: number, b: number) {
+function add2(a: number, b: number): number {
   return a + b;
 }

@@ -79,7 +79,7 @@ export class FormsWithSignalComponent {
 }
 
 @Component({
-  selector: 'app-signal-forms',
+  selector: 'app-reactive-forms',
   imports: [ReactiveFormsModule],
   template: `
     <form>

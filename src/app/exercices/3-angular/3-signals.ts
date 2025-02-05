@@ -11,7 +11,9 @@ console.log(number()); // 12
  * Écriture (avec set ou update)
  */
 number.set(24);
+
 number.update((value) => value + 1);
+number.set(number() + 1); // Idem que la ligne précédente
 
 /**
  * Création de valeurs dérivées (computed) : elles sont recalculées à chaque fois que les valeurs qu'elles utilisent changent.
@@ -31,7 +33,6 @@ const sum = computed(() => a() + b());
 /**
  * À éviter au maximum, mais peut être utile pour débugger.
  */
-
 @Component({
   selector: 'app-signals',
   template: ``,

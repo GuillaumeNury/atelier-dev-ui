@@ -1,4 +1,4 @@
-export {}
+export {};
 
 interface Person {
   firstName: string;
@@ -8,13 +8,13 @@ interface Person {
 
 const user1: Person = {
   firstName: 'John',
-  lastName: 'Doe'
+  lastName: 'Doe',
 };
 
 const user2: Person = {
   firstName: 'Jane',
   lastName: 'Doe',
-  age: 42
+  age: 42,
 };
 
 const user3: Person = {
@@ -29,11 +29,12 @@ function greet(person: Person) {
 
 greet(user1);
 
-greet({
+const lol = {
   firstName: 'Jane',
   lastName: 'Doe',
-  age: 42,
-});
+};
+
+greet(lol);
 
 /**
  * On peut faire de l'héritage
