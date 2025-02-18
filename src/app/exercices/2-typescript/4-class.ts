@@ -15,6 +15,11 @@ class Animal {
   public move(distance: number): void {
     console.log(`${this.name} moved ${distance} meters.`);
   }
+
+  #truePrivate() {
+    // On ne peut être appelé que dans la classe : ce n'est pas juste une vérification du compilateur.
+    // C'est le runtime JavaScript qui empêche l'accès en dehors
+  }
 }
 
 const dog = new Animal('Dog');
